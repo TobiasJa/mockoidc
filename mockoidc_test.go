@@ -4,15 +4,15 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
+	"io"
 	"net"
 	"net/http"
 	"net/url"
 	"testing"
 	"time"
 
+	"github.com/TobiasJa/mockoidc"
 	"github.com/golang-jwt/jwt/v5"
-	"github.com/oauth2-proxy/mockoidc"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -111,7 +111,7 @@ func TestRun(t *testing.T) {
 	assert.Equal(t, http.StatusOK, resp.StatusCode)
 
 	defer resp.Body.Close()
-	body, err := ioutil.ReadAll(resp.Body)
+	body, err := io.ReadAll(resp.Body)
 	assert.NoError(t, err)
 
 	tokens := make(map[string]interface{})
@@ -173,7 +173,7 @@ func TestRun(t *testing.T) {
 	assert.Equal(t, http.StatusOK, resp.StatusCode)
 
 	defer resp.Body.Close()
-	refreshBody, err := ioutil.ReadAll(resp.Body)
+	refreshBody, err := io.ReadAll(resp.Body)
 	assert.NoError(t, err)
 
 	refreshedTokens := make(map[string]interface{})

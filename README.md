@@ -2,19 +2,21 @@
 
 A Mock OpenID Connect Server for Authentication Unit and Integration Tests.
 
+Fork of github.com/oauth2-proxy/mockoidc
+
 Created by @NickMeves and @egrif during the [Greenhouse Software](https://medium.com/in-the-weeds)
 2021 Q1 Hack Day.
 
-[![Go Report Card](https://goreportcard.com/badge/github.com/oauth2-proxy/mockoidc)](https://goreportcard.com/report/github.com/oauth2-proxy/mockoidc)
+[![Go Report Card](https://goreportcard.com/badge/github.com/TobiasJa/mockoidc)](https://goreportcard.com/report/github.com/TobiasJa/mockoidc)
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
-[![Maintainability](https://api.codeclimate.com/v1/badges/99c0561090d1002dc7e3/maintainability)](https://codeclimate.com/github/oauth2-proxy/mockoidc/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/99c0561090d1002dc7e3/test_coverage)](https://codeclimate.com/github/oauth2-proxy/mockoidc/test_coverage)
+[![Maintainability](https://api.codeclimate.com/v1/badges/99c0561090d1002dc7e3/maintainability)](https://codeclimate.com/github/TobiasJa/mockoidc/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/99c0561090d1002dc7e3/test_coverage)](https://codeclimate.com/github/TobiasJa/mockoidc/test_coverage)
 
 ## Usage
 
 Import the package
 ```
-import "github.com/oauth2-proxy/mockoidc"
+import "github.com/TobiasJa/mockoidc"
 ```
 
 Start the MockOIDC Server. This will spin up a minimal OIDC server in its own
